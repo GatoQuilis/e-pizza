@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+
+    <link type="text/css" href="/css/forms-prueba.css" rel="stylesheet" />
+
+    <body class="body-form">
+        <%- include('../partials/header.ejs') %>
+            <main>
+                <form action="register" class="login-form" enctype="multipart/form-data" method="POST">
+                    <section class="form-register">
+                        <h4 class="h4-form">Registrate</h4>
+                        <div class="user-name">
+
+                            <div class="div-form">
+                                <label class="label-form">
+                                    <span class="span-form">Nombre</span>
+                                    <input class="input-form firstName" id="firstName" type="text" autocomplete="off"
+                                        name="firstName"
+                                        value="<%= locals.oldData ? oldData.user_firstName : null %>" />
+                                </label>
+                                <% if(locals.errors && errors.firstName) { %>
+                                    <p class="error-msg">
+                                        <%= errors.firstName.msg %>
+                                    </p>
+                                    <% } %>
+                            </div>
+                            <div class="div-form">
+                                <label class="label-form">
+                                    <span class="span-form">Apellido</span>
+                                    <input class="input-form lastName" id="lastName" type="text" autocomplete="off"
+                                        name="lastName" value="<%= locals.oldData ? oldData.user_lastName : null %>" />
+                                    
+                                </label>
+                                <% if(locals.errors && errors.lastName) { %>
+                                    <p class="error-msg">
+                                        <%= errors.lastName.msg %>
+                                    </p>
+                                    <% } %>
+                            </div>
+                        </div>
+                        <div class="div-form">
+                            <label class="label-form">
+                                <span class="span-form">E-mail</span>
+                                <input class="input-form email" id="email" type="email" autocomplete="off" name="email"
+                                    value="<%= locals.oldData ? oldData.user_email : null %>" />
+                            </label>
+                            <% if(locals.errors && errors.email) { %>
+                                <p class="error-msg">
+                                    <%= errors.email.msg %>
+                                </p>
+                                <% } %>
+                        </div>
+                        <div class="div-form-password">
+
+                            <label class="label-form">
+
+                                <!-- <i class="fas icon fa-eye " onclick="mostrarContrasena()"></i> -->
+
+                                <div class="icono">
+                                    <span class="span-form">Contraseña</span>
+                                    <input class="input-form password" id="password" type="password" autocomplete="off"
+                                        name="password" value="<%= locals.oldData ? oldData.user_password : null %>" />
+                                    <i class="fas icon fa-eye" onclick="mostrarContrasena()"></i>
+
+                                </div>
+                                
+                        </div>
+                        </label>
+                        <% if(locals.errors && errors.password) { %>
+                            <p class="error-msg">
+                                <%= errors.password.msg %>
+                            </p>
+                            <% } %>
+                        </div>
+                        <ul class="errors"></ul>
+                        <button class="button" type="submit" name="" value="Crear cuenta"> Crear cuenta </button>
+                        <button class="button-secondary" type="button" onclick="window.history.back();">
+                            Cancelar </button>
+                        <p><a href="/users/login">¿Ya tenés una cuenta?¡Ingresá!</a></p>
+                    </section>
+                </form>
+            </main>
+
+
+            <%- include('../partials/footer.ejs') %>
+
+                <script src="/js/register.js"></script>
+                <script src="/js/forms.js"></script>
+                <script src="/js/password.js"></script>
+    </body>
+
+</html>

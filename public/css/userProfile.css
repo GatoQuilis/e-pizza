@@ -1,0 +1,56 @@
+*{
+    font-family: Roboto;
+}
+
+header{
+    display: flex !important;
+}
+
+main{
+    margin: 0 auto;
+    width: 50%;
+}
+
+body {
+    background-color: #CF0A2C;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-around;
+    background-color:black;
+    padding: 5px;
+    color:white;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+
+.container-user{
+    display: flex;
+    color:antiquewhite;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.mensaje-user{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+ 
+.image-user{
+    width: 30%;
+    height: auto;
+    border-radius: 20%;
+    margin: 0 auto;
+}
+
+.mail-user{
+    font: bold 16px "Roboto", sans-serif;
+}

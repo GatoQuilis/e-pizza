@@ -1,0 +1,110 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+header{
+    display: flex !important;
+}
+
+body {
+    background-color: #CF0A2C;
+
+}
+
+
+.pizzas{
+    text-align: center;
+    color: white;
+}
+
+main{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.contenedor-articulo{
+    flex-direction: column;
+}
+
+main section article{
+    margin-top: 10px auto;  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section .contenedor-pizzas article{
+    border:1px solid gold;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+.texto-contenedor-pizza{
+    text-align: center ;
+    color:white;
+    font-size: 15px;
+}
+
+.contenedor-precio-pizza{
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.contenedor-precio-pizza p:hover{
+    color:teal;
+}
+.fa-cart-plus{
+    font-size: 30px;
+    color: white;
+}
+
+main article{
+    width: auto;
+}
+
+.nombre-producto{
+    font-size: 20px;
+}
+
+.btn-reiniciar-ver-container{
+    justify-content: space-between;
+}
+
+
+@media (min-width:708px) {
+
+    main section div.contenedor-pizzas {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    main section div.contenedor-pizzas article {
+        width: 45%;
+    }
+
+}
+
+@media (min-width:1200px) {
+
+    main section div.contenedor-pizzas {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    main section div.contenedor-pizzas article {
+        width: 22%;
+    }
+
+}
+
+
+
